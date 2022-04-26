@@ -5,9 +5,6 @@ public class ControlStructurs : MonoBehaviour
 
 
 {
-    [SerializeField] int a;
-
-    [SerializeField] string Eredmény;
 
     void Start()
     {
@@ -17,7 +14,6 @@ public class ControlStructurs : MonoBehaviour
             Debug.Log(i);
         }
         
-
     
     }
 

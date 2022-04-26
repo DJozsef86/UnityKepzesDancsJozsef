@@ -9,7 +9,7 @@ public class Gyakorlas : MonoBehaviour
     [SerializeField] int count;
 
     // Update is called once per frame
-    void Start()
+    void OnValidate()
     {
         count = 0;
         for (int i = 1; i<num; i++)
