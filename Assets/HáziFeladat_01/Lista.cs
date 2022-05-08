@@ -15,6 +15,7 @@ public class Lista : MonoBehaviour
     {
 
         Eredmeny = (Text01 + ", " + Text02 + ", " + Text03 + ", ");
+        Eredmeny = $"{Text01}, {Text02}, {Text03},";  //EZ IS HELYES!!!
 
     }
 }
