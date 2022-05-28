@@ -40,4 +40,5 @@ public class Obstacle : MonoBehaviour
         Gizmos.DrawLine(p1.position, p2.position);
     }
 
+
 }

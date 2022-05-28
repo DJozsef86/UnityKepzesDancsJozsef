@@ -28,4 +28,7 @@ public class enemy : MonoBehaviour
         if (movement.magnitude != 0)
             transform.rotation = Quaternion.LookRotation(movement);
     }
+
+
+
 }
