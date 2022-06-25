@@ -10,7 +10,13 @@ public class Avatar : MonoBehaviour
     [SerializeField] Space movemantSpace = Space.World;
 
     [SerializeField] GameObject projectilePrototype;
+    [SerializeField] GameObject projectileStartPosition;
 
+    [SerializeField] KeyCode rightKey;
+    [SerializeField] KeyCode leftKey;
+    [SerializeField] KeyCode downKey;
+    [SerializeField] KeyCode upKey;
+    [SerializeField] KeyCode jumpKey;
 
 
     private void Update()
@@ -32,7 +38,7 @@ public class Avatar : MonoBehaviour
             Projectile p = go.GetComponent<Projectile>();
 
             Vector3 forward = transform.forward;
-            go.transform.position = projectilePrototype.transform.position;
+            go.transform.position = projectileStartPosition.transform.position;
             p.Shoot(forward);
         }
     }
@@ -40,12 +46,12 @@ public class Avatar : MonoBehaviour
     void Move()
 
     {
-        bool right = Input.GetKey(KeyCode.RightArrow);          // x jobbra balra
-        bool left = Input.GetKey(KeyCode.LeftArrow);
+        bool right = Input.GetKey(rightKey);          // x jobbra balra
+        bool left = Input.GetKey(leftKey);
         float xMovement = (right ? 1 : 0) + (left ? -1 : 0);
 
-        bool up = Input.GetKey(KeyCode.UpArrow);                //z elõre hátra
-        bool down = Input.GetKey(KeyCode.DownArrow);
+        bool up = Input.GetKey(upKey);                //z elõre hátra
+        bool down = Input.GetKey(downKey);
         float zMovement = (up ? 1 : 0) + (down ? -1 : 0);
 
         Vector3 movement = new Vector3(xMovement, 0, zMovement);
@@ -85,4 +91,6 @@ public class Avatar : MonoBehaviour
     {
         transform.position = Vector3.zero;
     }
+
+
 }

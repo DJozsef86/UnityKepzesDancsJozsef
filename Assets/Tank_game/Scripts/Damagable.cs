@@ -29,8 +29,11 @@ public class Damagable : MonoBehaviour
 
         UpdateText();
 
-        if (health <= 0)
-            gameOverSreen.SetActive(true);
+        if (gameOverSreen != null)
+        {
+            if (health <= 0)
+                gameOverSreen.SetActive(true);
+        }
     }
 
     void UpdateText()
